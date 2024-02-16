@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  height: 100%;
+  color: white;
+}
+
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+.left,
+.right {
+  width: 50%;
+  position: relative;
+  padding: 30px;
+}
+
+button {
+  border: none;
+  background: white;
+  padding: 15px 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btn2 {
+  background: #20c863;
+  color: white;
+}
+
+.btn2:hover {
+  background: white;
+  color: #20c863;
+  border: 2px solid #20c863;
+}
+
+p {
+  margin-top: 20px;
+  line-height: 30px;
+}
+
+.mtop {
+  margin-top: 5%;
+}
+
+.btn3 {
+  background: none;
+  border: 2px solid #20c863;
+  color: #20c863;
+  padding: 15px 50px;
+}
+
+.heading h2 {
+  font-size: 35px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.heading2 h2 {
+  margin: 0;
+  text-align: center;
+}
+
+/*---------skills--------*/
+/*---------line skills--------*/
+.line_content .line {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.line_content p {
+  text-transform: uppercase;
+  width: 35%;
+}
+
+.line_content h5 {
+  background: #30d3ff;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 12px;
+}
+
+.line_content h5::after {
+  position: absolute;
+  content: "";
+  left: -4px;
+  top: 12px;
+  width: 10px;
+  height: 10px;
+  background: #30d3ff;
+  transform: rotate(45deg);
+}
+
+.line_content .line:nth-child(2) h5::after,
+.line_content .line:nth-child(2) h5 {
+  background: #ff761b;
+}
+
+.line_content .line:nth-child(3) h5::after,
+.line_content .line:nth-child(3) h5 {
+  background: #ff26be;
+}
+
+.line_content .bar {
+  width: 90%;
+  background: #ffffff;
+  height: 5px;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.line_content .line_bar {
+  animation: bar 2.8s;
+  height: 5px;
+  background: #30d3ff;
+  width: 85%;
+}
+.line_content .html {
+  width: 95%;
+  background: #ff761b;
+}
+.line_content .css {
+  width: 85%;
+  background: #ff761b;
+}
+
+.line_content .js {
+  width: 75%;
+  background: #b11281;
+}
+.line_content .sql {
+  width: 40%;
+  background: #360c29;
+}
+.line_content .angular {
+  width: 80%;
+  background: #d652ae;
+}
+
+@keyframes bar {
+  0% {
+    width: 0%;
+  }
+}
+
+@keyframes write {
+  0% {
+    left: 0;
+  }
+
+  20% {
+    content: "15%";
+  }
+
+  40% {
+    content: "30%";
+  }
+
+  60% {
+    content: "45%";
+  }
+
+  80% {
+    content: "60%";
+  }
+
+  100% {
+    content: "70%";
+  }
+}
+.skills {
+  padding-top: 20%;
+}
+/*---------line skills--------*/
+@keyframes circle_animation {
+  0% {
+    stroke-dashoffset: 340px;
+  }
+
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+.skill-container {
+  margin-top: 50px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+circle {
+  stroke-width: 5px;
+  stroke: #d593ff;
+  fill: transparent;
+  animation: circle_animation 2s linear backwards;
+}
+
+.skill-container .circle_box:nth-child(2) circle {
+  stroke: #35fc00;
+}
+
+.skill-container .circle_box:nth-child(3) circle {
+  stroke: #ffa726;
+}
+
+.skill-container .circle_box:nth-child(4) circle {
+  stroke: #00a0d2;
+}
+
+circle p {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+/*---------skills--------*/
+/*---------footer--------*/
+@media only screen and (max-width: 768px) {
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .heading h2 {
+    margin-top: 20px;
+  }
+
+  .skills .container {
+    flex-direction: column;
+  }
+
+  .skill-container {
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .line_content .line {
+    display: flex;
+    margin-bottom: 10px;
+    gap: 5%;
+  }
+  .skills {
+    padding-top: 90%;
+    align-items: center;
+    text-align: center;
+  }
+}
